@@ -37,7 +37,7 @@
   </div>
   <!-- end:: Body -->
   <KTScrollTop></KTScrollTop>
-  <KTUpgradeToPro></KTUpgradeToPro>
+  <!-- <KTUpgradeToPro></KTUpgradeToPro> -->
   <KTUserMenu></KTUserMenu>
 </template>
 
@@ -52,7 +52,7 @@ import HtmlClass from "@/core/services/LayoutService";
 import KTScrollTop from "@/layout/extras/ScrollTop.vue";
 import KTUserMenu from "@/layout/header/partials/ActivityDrawer.vue";
 import KTLoader from "@/components/Loader.vue";
-import KTUpgradeToPro from "@/layout/extras/UpgradeToPro.vue";
+// import KTUpgradeToPro from "@/layout/extras/UpgradeToPro.vue";
 import { Actions } from "@/store/enums/StoreEnums";
 import {
   MenuComponent,
@@ -80,7 +80,6 @@ export default defineComponent({
     KTFooter,
     KTScrollTop,
     KTUserMenu,
-    KTUpgradeToPro,
     KTLoader,
   },
   setup() {

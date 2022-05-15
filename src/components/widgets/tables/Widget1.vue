@@ -6,7 +6,7 @@
       <!--begin::Card title-->
       <h3 class="card-title align-items-start flex-column">
         <span class="card-label fw-boldest text-gray-800 fs-2"
-          >Teams Progress</span
+          >{{ getDescription }}</span
         >
         <span class="text-gray-400 fw-bold mt-2 fs-6">890,344 Sales</span>
       </h3>
@@ -57,6 +57,12 @@
           </select>
           <!--end::Select-->
         </div>
+
+        <!--begin::Add component-->
+        <div v-if="addComponent" class="mx-1 my-1">
+          <a href="#" class="btn btn-sm btn-primary">Add {{addComponent}}</a>
+        </div>
+        <!--end::Add Component-->
       </div>
       <!--end::Card toolbar-->
     </div>
@@ -203,16 +209,23 @@
 </template>
 
 <script lang="ts">
-import { defineComponent, ref } from "vue";
+import { computed, defineComponent, ref } from "vue";
 
 export default defineComponent({
   name: "kt-widget-1",
   props: {
     widgetClasses: String,
+    description: String,
+    addComponent: String,
   },
   components: {},
-  setup() {
+  setup(props) {
     const all = ref<boolean>(false);
+        const getDescription = computed(() => {
+      return props.description
+        ? props.description
+        : "Teams Progress";
+    });
     const items = [
       {
         logo: "media/svg/brand-logos/aven.svg",
@@ -264,6 +277,7 @@ export default defineComponent({
     return {
       items,
       all,
+      getDescription,
     };
   },
 });
