@@ -35,17 +35,6 @@
       <KTMenu></KTMenu>
     </div>
     <!--end::Aside menu-->
-
-    <!--begin::Footer-->
-    <div class="aside-footer flex-column-auto px-6 pb-5" id="kt_aside_footer">
-      <a
-        href="https://keenthemes.com/products/rider-vue-pro"
-        class="btn btn-light-primary w-100"
-      >
-        Upgrade To Pro
-      </a>
-    </div>
-    <!--end::Footer-->
   </div>
   <!--end::Aside-->
 </template>
