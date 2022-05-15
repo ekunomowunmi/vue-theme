@@ -88,6 +88,32 @@ const DocMenuConfig = [
         ],
       },
       {
+        sectionTitle: "orders",
+        route: "/orders",
+        svgIcon: "media/icons/duotune/communication/com006.svg",
+        sub: [
+          {
+            heading: "ordersListing",
+            route: "/orders/order-listing",
+          },
+          {
+            heading: "ordersDetails",
+            route: "/orders/order-details",
+            
+          },
+          {
+            heading: "newOrder",
+            route: "/orders/new-order",
+            
+          },
+          {
+            heading: "editOrder",
+            route: "/orders/edit-order",
+            
+          },
+        ],
+      },
+      {
         sectionTitle: "authentication",
         route: "/authentication",
         svgIcon: "media/icons/duotune/technology/teh004.svg",

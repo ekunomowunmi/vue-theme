@@ -125,6 +125,16 @@
     font-weight: $font-weight-boldest !important;
 }
 
+.font-size-large {
+    font-size: $font-size-lg !important;
+}
+.font-size-xl {
+    font-size: $font-size-xl !important;
+}
+.font-size-xxl {
+    font-size: $font-size-xxl !important;
+}
+
 // Text transparent
 .text-transparent {
     color: transparent;

@@ -12,6 +12,33 @@ const routes: Array<RouteRecordRaw> = [
         component: () => import("@/views/Dashboard.vue"),
       },
       {
+        path: "/pages/logistics",
+        name: "logistics",
+        component: () => import("@/views/pages/Logistics.vue"),
+      },
+      {
+        path: "/orders",
+        name: "orders",
+        component: () => import("@/views/pages/Orders.vue"),
+        children: [
+          {
+            path: "order-listing",
+            name: "order-listing",
+            component: () => import("@/views/pages/Orders.vue"),
+          },
+          {
+            path: "order-details",
+            name: "order-details",
+            component: () => import("@/views/pages/Orders.vue"),
+          },
+          {
+            path: "new-order",
+            name: "new-order",
+            component: () => import("@/views/pages/Logistics.vue"),
+          },
+        ]
+      },
+      {
         path: "/pages/about-us",
         name: "about-us",
         component: () => import("@/views/pages/AboutUs.vue"),
